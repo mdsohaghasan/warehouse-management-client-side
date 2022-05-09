@@ -11,6 +11,27 @@ function MyItemsHook() {
             .then((data) => setItemes(data));
     }, []);
 
+    // delete button
+    const handleDelete = id => {
+        console.log(id)
+        const proceed = window.confirm('are you sure deleteing');
+        if (proceed) {
+            console.log(id);
+            const url = `https://thawing-harbor-02230.herokuapp.com/MyItems/${id}`;
+            fetch(url, {
+                method: 'DELETE',
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        console.log(data);
+                        const remaining = Itemes.filter(item => item._id !== id);
+                        setItemes(remaining)
+                    }
+                })
+        }
+    }
+
     return (
 
         <div>
@@ -26,8 +47,9 @@ function MyItemsHook() {
                                     <h5 class="card-title">Quantity : {item.quantity}</h5>
                                     <p class="card-text">ShortDes : {item.description}</p>
                                     <p class="card-text">Supplier : {item.supplier}</p>
-                                    {/* <button onClick={() => handleDelete(item._id)} class="btn btn-info">{_id}</button> */}
-                                    <Link to={`/ItemDetails/${item._id}`} class="btn btn-primary">Update my btn</Link>
+                                    <button onClick={() => handleDelete(item._id)} class="btn btn-info">delete</button>
+                                    <Link to={`/ItemDetails/${item._id}`} class="btn btn-primary">Update btn</Link>
+
                                 </div>
                             </div>
                         </div>
