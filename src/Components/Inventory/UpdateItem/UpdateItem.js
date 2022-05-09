@@ -53,7 +53,7 @@ function UpdateItem() {
             {/* item update form */}
 
             <div className='w-50 mx-auto'>
-                <h2>Add Iteme Form</h2>
+                <h2>update Iteme</h2>
 
                 <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                     <input className='mb-2' placeholder='name'{...register("name")} />

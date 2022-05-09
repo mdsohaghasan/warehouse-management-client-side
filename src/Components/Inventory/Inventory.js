@@ -6,7 +6,7 @@ function Inventory() {
 
     return (
         <div>
-            <div>Inventory manage</div>
+            <h1>Inventory manage</h1>
 
             <InventoryItem></InventoryItem>
 

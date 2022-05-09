@@ -24,8 +24,10 @@ function AddMyItem() {
 
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 <input className='mb-2' placeholder='name'{...register("name")} />
-                <input className='mb-2' placeholder='description'{...register("description")} />
                 <input className='mb-2' placeholder='price' type="number"{...register("price")} />
+                <input className='mb-2' placeholder='quantity' type="number"{...register("quantity")} />
+                <input className='mb-2' placeholder='description'{...register("description")} />
+                <input className='mb-2' placeholder='supplier'{...register("supplier")} />
                 <input className='mb-2' placeholder='pic' type="text"{...register("pic", { required: true })} />
                 {errors.exampleRequired && <span>This field is required</span>}
                 <input className='mb-2' type="submit" />
