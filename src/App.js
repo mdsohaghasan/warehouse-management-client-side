@@ -34,7 +34,7 @@ function App() {
         <Route path="/ItemDetails/:id" element={<ItemDetails></ItemDetails>}></Route>
         <Route path="/Inventory" element={<Inventory></Inventory>}></Route>
         {/* <Route path="/additem" element={<AddItem></AddItem>}></Route> */}
-        <Route path="/additem" element={<AddMyItem></AddMyItem>}></Route>
+        <Route path="/addmyitem" element={<AddMyItem></AddMyItem>}></Route>
         <Route path="/Checkout" element={
           <RequireAuth><Checkout></Checkout></RequireAuth>}></Route>
         <Route path="/*" element={<NotFound />} />

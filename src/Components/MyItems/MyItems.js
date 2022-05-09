@@ -11,7 +11,7 @@ function MyItems() {
 
             <MyItemsHook></MyItemsHook>
 
-            <Link to={`/additem/${''}`} class="btn btn-primary">Add Item</Link>
+            <Link to={`/addmyitem/`} class="btn btn-primary">Add Item</Link>
 
         </div>
     )
