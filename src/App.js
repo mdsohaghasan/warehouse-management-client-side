@@ -13,10 +13,10 @@ import NotFound from './Components/NotFound/NotFound';
 import Footer from './Components/Footer/Footer';
 import Inventory from './Components/Inventory/Inventory';
 import MyItems from './Components/MyItems/MyItems';
-import ItemDetails from './Components/ItemDetails/ItemDetails';
 import AddMyItem from './Components/MyItems/Add Item/AddMyItem';
 import UpdateMyItem from './Components/MyItems/UpdateItem/UpdateMyItem';
 import AddItem from './Components/Inventory/Add Item/AddItem';
+import UpdateItem from './Components/Inventory/UpdateItem/UpdateItem';
 
 
 
@@ -32,8 +32,8 @@ function App() {
         <Route path="/Blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/About" element={<About></About>}></Route>
         <Route path="/myItems" element={<MyItems></MyItems>}></Route>
-        {/* <Route path="/ItemDetails/:id" element={<ItemDetails></ItemDetails>}></Route> */}
-        <Route path="/ItemDetails/:id" element={<UpdateMyItem></UpdateMyItem>}></Route>
+        <Route path="/ItemDetails/:id" element={<UpdateItem></UpdateItem>}></Route>
+        <Route path="/MyItemDetails/:id" element={<UpdateMyItem></UpdateMyItem>}></Route>
         <Route path="/Inventory" element={<Inventory></Inventory>}></Route>
         <Route path="/additem" element={<AddItem></AddItem>}></Route>
         <Route path="/addmyitem" element={<AddMyItem></AddMyItem>}></Route>

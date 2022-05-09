@@ -48,7 +48,7 @@ function MyItemsHook() {
                                     <p class="card-text">ShortDes : {item.description}</p>
                                     <p class="card-text">Supplier : {item.supplier}</p>
                                     <button onClick={() => handleDelete(item._id)} class="btn btn-info">delete</button>
-                                    <Link to={`/ItemDetails/${item._id}`} class="btn btn-primary">Update btn</Link>
+                                    <Link to={`/MyItemDetails/${item._id}`} class="btn btn-primary">Update btn</Link>
 
                                 </div>
                             </div>
