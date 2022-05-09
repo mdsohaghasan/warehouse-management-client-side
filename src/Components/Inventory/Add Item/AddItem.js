@@ -30,7 +30,6 @@ function AddItem() {
                 {errors.exampleRequired && <span>This field is required</span>}
                 <input className='mb-2' type="submit" />
             </form>
-
         </div>
     )
 }

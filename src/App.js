@@ -14,9 +14,9 @@ import Footer from './Components/Footer/Footer';
 import Inventory from './Components/Inventory/Inventory';
 import MyItems from './Components/MyItems/MyItems';
 import ItemDetails from './Components/ItemDetails/ItemDetails';
-import AddItem from './Components/Inventory/AddItem';
 import AddMyItem from './Components/MyItems/Add Item/AddMyItem';
 import UpdateMyItem from './Components/MyItems/UpdateItem/UpdateMyItem';
+import AddItem from './Components/Inventory/Add Item/AddItem';
 
 
 
@@ -35,7 +35,7 @@ function App() {
         {/* <Route path="/ItemDetails/:id" element={<ItemDetails></ItemDetails>}></Route> */}
         <Route path="/ItemDetails/:id" element={<UpdateMyItem></UpdateMyItem>}></Route>
         <Route path="/Inventory" element={<Inventory></Inventory>}></Route>
-        {/* <Route path="/additem" element={<AddItem></AddItem>}></Route> */}
+        <Route path="/additem" element={<AddItem></AddItem>}></Route>
         <Route path="/addmyitem" element={<AddMyItem></AddMyItem>}></Route>
         <Route path="/Checkout" element={
           <RequireAuth><Checkout></Checkout></RequireAuth>}></Route>

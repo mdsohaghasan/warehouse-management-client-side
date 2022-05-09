@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import slide1 from "../../img/slide/1.jpg";
 import slide2 from "../../img/slide/2.jpg";
 import slide3 from "../../img/slide/3.jpg";
-import ItemHooks from "../itemHooks/ItemHooks";
+import InventoryItem from "../Inventory/InventoryItem";
 
 function Home() {
   return (
@@ -67,8 +67,8 @@ function Home() {
       </div>
 
       <div>
-        <ItemHooks></ItemHooks>
 
+        <InventoryItem></InventoryItem>
         <Link to="/Inventory" class="btn btn-primary">get Inventory</Link>
 
       </div>
