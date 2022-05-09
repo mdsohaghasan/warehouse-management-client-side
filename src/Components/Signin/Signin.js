@@ -13,13 +13,13 @@ function Signin() {
   const location = useLocation();
   const from = location.state?.from?.pathname || '/'
 
-  const [signInWithEmailAndPassword,user,error,] = useSignInWithEmailAndPassword(auth);
+  const [signInWithEmailAndPassword, user, error,] = useSignInWithEmailAndPassword(auth);
   const [signInWithGoogle] = useSignInWithGoogle(auth);
-  const [signInWithGithub ] = useSignInWithGithub(auth);
+  const [signInWithGithub] = useSignInWithGithub(auth);
   const [signInWithFacebook,] = useSignInWithFacebook(auth);
 
-  if(user){
-    navigate(from, {replace:true});
+  if (user) {
+    navigate(from, { replace: true });
   }
 
   const handleEmailBlur = event => {
@@ -30,18 +30,36 @@ function Signin() {
   }
   const handleSignInUser = event => {
     event.preventDefault();
-    
-    signInWithEmailAndPassword(email,password);
+
+    signInWithEmailAndPassword(email, password);
   }
 
-  
+
 
   return (
     <div>
       <h2>SignIn Now</h2>
-      <button onClick={() => signInWithGoogle ()} className="Btn">Google Singin</button>
-      <button onClick={() => signInWithGithub ()} className="Btn">Github Singin</button>
-      <button onClick={() => signInWithFacebook ()} className="Btn">Facebook Singin</button>
+      <button onClick={() => signInWithGoogle()} className="Btn">Google Singin</button>
+      <button onClick={() => signInWithGithub()} className="Btn">Github Singin</button>
+      <button onClick={() => signInWithFacebook()} className="Btn">Facebook Singin</button>
+
+
+      {/* <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form> */}
 
       <form onSubmit={handleSignInUser}>
         <input onBlur={handleEmailBlur} type="email" placeholder='your email' required /> <br />
