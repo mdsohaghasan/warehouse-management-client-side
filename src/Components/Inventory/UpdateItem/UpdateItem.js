@@ -36,12 +36,19 @@ function UpdateItem() {
 
     return (
         <div>
-            <h2>Inventory Item Details</h2>
-            <p>Name : {Itemes.name}</p>
-            <p>Price : {Itemes.price}</p>
-            <p>Quantity : {Itemes.quantity}</p>
-            <p>Description : {Itemes.description}</p>
-            <p>Supplier : {Itemes.supplier}</p>
+            <h1>Inventory Item Details</h1>
+            <div className='w-50 mx-auto'>
+                <div class="card">
+                    <div class="card-body">
+                        <img src={Itemes.img} alt="item-pic" />
+                        <h5 class="card-title">Name : {Itemes.name}</h5>
+                        <h5 class="card-title">Price : {Itemes.price}</h5>
+                        <h5 class="card-title">Quantity : {Itemes.quantity}</h5>
+                        <p class="card-text">ShortDes : {Itemes.description}</p>
+                        <p class="card-text">Supplier : {Itemes.supplier}</p>
+                    </div>
+                </div>
+            </div>
 
             {/* item update form */}
 
@@ -50,9 +57,11 @@ function UpdateItem() {
 
                 <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                     <input className='mb-2' placeholder='name'{...register("name")} />
-                    <input className='mb-2' placeholder='description'{...register("description")} />
                     <input className='mb-2' placeholder='price' type="number"{...register("price")} />
-                    {/* <input className='mb-2' placeholder='pic' type="text"{...register("pic", { required: true })} /> */}
+                    <input className='mb-2' placeholder='quantity' type="number"{...register("quantity")} />
+                    <input className='mb-2' placeholder='description'{...register("description")} />
+                    <input className='mb-2' placeholder='supplier'{...register("supplier")} />
+                    <input className='mb-2' placeholder='pic' type="text"{...register("pic", { required: true })} />
                     {errors.exampleRequired && <span>This field is required</span>}
                     <input className='mb-2' type="submit" />
                 </form>

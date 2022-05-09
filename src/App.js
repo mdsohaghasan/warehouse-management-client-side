@@ -32,11 +32,17 @@ function App() {
         <Route path="/Register" element={<Register></Register>}></Route>
         <Route path="/Signin" element={<Signin></Signin>}></Route>
         <Route path="/Inventory" element={<Inventory></Inventory>}></Route>
-        <Route path="/myItems" element={<MyItems></MyItems>}></Route>
-        <Route path="/ItemDetails/:id" element={<UpdateItem></UpdateItem>}></Route>
-        <Route path="/MyItemDetails/:id" element={<UpdateMyItem></UpdateMyItem>}></Route>
-        <Route path="/additem" element={<AddItem></AddItem>}></Route>
-        <Route path="/addmyitem" element={<AddMyItem></AddMyItem>}></Route>
+
+        <Route path="/ItemDetails/:id" element={<RequireAuth><UpdateItem></UpdateItem></RequireAuth>}></Route>
+
+        <Route path="/MyItemDetails/:id" element={<RequireAuth><UpdateMyItem></UpdateMyItem></RequireAuth>}></Route>
+
+        <Route path="/myItems" element={<RequireAuth><MyItems></MyItems></RequireAuth>}></Route>
+
+        <Route path="/additem" element={<RequireAuth><AddItem></AddItem></RequireAuth>}></Route>
+
+        <Route path="/addmyitem" element={<RequireAuth><AddMyItem></AddMyItem></RequireAuth>}></Route>
+
         {/* <Route path="/Checkout" element={
           <RequireAuth><Checkout></Checkout></RequireAuth>}></Route> */}
         <Route path="/*" element={<NotFound />} />

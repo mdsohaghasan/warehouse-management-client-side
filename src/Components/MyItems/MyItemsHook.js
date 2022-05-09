@@ -41,7 +41,7 @@ function MyItemsHook() {
                         <div class="col-sm-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <img src={''} alt="item-pic" />
+                                    <img src={item.img} alt="item-pic" />
                                     <h5 class="card-title">Name : {item.name}</h5>
                                     <h5 class="card-title">Price : {item.price}</h5>
                                     <h5 class="card-title">Quantity : {item.quantity}</h5>
