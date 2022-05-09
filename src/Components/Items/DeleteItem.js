@@ -27,7 +27,7 @@ function DeleteItem() {
                     if (data.deletedCount > 0) {
                         console.log(data);
                         // const remaining = product.filter(item => item._id !== id);
-                        // setItemes(remaining)
+                        /// setItemes(remaining)
                     }
                 })
         }

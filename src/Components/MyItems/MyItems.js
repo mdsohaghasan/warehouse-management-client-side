@@ -1,8 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import MyItemsHook from './MyItemsHook';
 
 function MyItems() {
+
+
     return (
-        <div>myItems managess</div>
+        <div>
+            <h1>MyItems</h1>
+
+            <MyItemsHook></MyItemsHook>
+
+            <Link to={`/additem/${''}`} class="btn btn-primary">Add Item</Link>
+
+        </div>
     )
 }
 

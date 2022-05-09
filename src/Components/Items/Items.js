@@ -43,28 +43,9 @@ function Items({ item }) {
                             <p class="card-text">shortDes : {description}</p>
                             <button onClick={() => handleDelete(item._id)} class="btn btn-info">{_id}</button>
                             <Link to={`/ItemDetails/${item._id}`} class="btn btn-primary">Update btn</Link>
-                            {/* <DeleteItem></DeleteItem> */}
-
-
                         </div>
                     </div>
                 </div>
-                {/* <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src={"pic"} alt="item-pic" />
-                            <h5 class="card-title">Name : {name}</h5>
-                            <p class="card-text">price : {price}</p>
-                            <p class="card-text">shortDes : {shortDes}</p>
-                            <p class="card-text">quantity : {quantity}</p>
-                            <p class="card-text">supplyername : {supplyername}</p>
-                            <Link to="/updateItems" class="btn btn-primary">Update Item</Link>
-                        </div>
-                    </div>
-                </div> */}
-
-
-
             </div>
 
         </div>
