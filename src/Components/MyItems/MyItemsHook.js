@@ -36,8 +36,8 @@ function MyItemsHook() {
 
         <div>
             <div className="Itmes-container container">
-                {Itemes.map((item) => (
-                    <div class="row">
+                <div class="row">
+                    {Itemes.map((item) => (
                         <div class="col-sm-6">
                             <div class="card">
                                 <div class="card-body">
@@ -53,9 +53,10 @@ function MyItemsHook() {
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                ))}
+
+                    ))}
+                </div>
             </div>
         </div>
 

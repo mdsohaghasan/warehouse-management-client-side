@@ -27,18 +27,18 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
-        <Route path="/Register" element={<Register></Register>}></Route>
-        <Route path="/Signin" element={<Signin></Signin>}></Route>
         <Route path="/Blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/About" element={<About></About>}></Route>
+        <Route path="/Register" element={<Register></Register>}></Route>
+        <Route path="/Signin" element={<Signin></Signin>}></Route>
+        <Route path="/Inventory" element={<Inventory></Inventory>}></Route>
         <Route path="/myItems" element={<MyItems></MyItems>}></Route>
         <Route path="/ItemDetails/:id" element={<UpdateItem></UpdateItem>}></Route>
         <Route path="/MyItemDetails/:id" element={<UpdateMyItem></UpdateMyItem>}></Route>
-        <Route path="/Inventory" element={<Inventory></Inventory>}></Route>
         <Route path="/additem" element={<AddItem></AddItem>}></Route>
         <Route path="/addmyitem" element={<AddMyItem></AddMyItem>}></Route>
-        <Route path="/Checkout" element={
-          <RequireAuth><Checkout></Checkout></RequireAuth>}></Route>
+        {/* <Route path="/Checkout" element={
+          <RequireAuth><Checkout></Checkout></RequireAuth>}></Route> */}
         <Route path="/*" element={<NotFound />} />
 
       </Routes>
