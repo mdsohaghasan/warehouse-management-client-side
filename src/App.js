@@ -15,6 +15,7 @@ import Inventory from './Components/Inventory/Inventory';
 import MyItems from './Components/MyItems/MyItems';
 import ItemDetails from './Components/ItemDetails/ItemDetails';
 import AddItem from './Components/Inventory/AddItem';
+import AddMyItem from './Components/MyItems/Add Item/AddMyItem';
 
 
 
@@ -32,7 +33,8 @@ function App() {
         <Route path="/myItems" element={<MyItems></MyItems>}></Route>
         <Route path="/ItemDetails/:id" element={<ItemDetails></ItemDetails>}></Route>
         <Route path="/Inventory" element={<Inventory></Inventory>}></Route>
-        <Route path="/additem" element={<AddItem></AddItem>}></Route>
+        {/* <Route path="/additem" element={<AddItem></AddItem>}></Route> */}
+        <Route path="/additem" element={<AddMyItem></AddMyItem>}></Route>
         <Route path="/Checkout" element={
           <RequireAuth><Checkout></Checkout></RequireAuth>}></Route>
         <Route path="/*" element={<NotFound />} />
